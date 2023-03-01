@@ -20,3 +20,9 @@ Route::get('/', function () {
 
 Route::get('/alumnos', [AlumnosController::class, 'index'])
     ->name('alumnos.index');
+//Create - Formularios de creación
+Route::get('/alumnos/create', [AlumnosController::class,'create'])
+    ->name('alumnos.create');
+//Store - Almacenar un nuevo registro
+Route::post('/alumnos', [AlumnosController::class,'store'])
+    ->name('alumnos.store');
